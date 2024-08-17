@@ -31,35 +31,35 @@ class calculator extends Command
         $second_value = $this->argument("second_value");
 
         if(!is_numeric($first_value)) {
-            $this->error("First variable is not a number");
+            $this->error("This operation requires two numerical values");
             return;
         }
 
         switch ($operator) {
             case '+':
                 if($second_value == null || !is_numeric($second_value)) {
-                    $this->error("This operation requires two values");
+                    $this->error("This operation requires two numerical values");
                     return;
                 }
                 $this->line($first_value + $second_value);
                 break;
             case '-':
                 if($second_value == null || !is_numeric($second_value)) {
-                    $this->error("This operation requires two values");
+                    $this->error("This operation requires two numerical values");
                     return;
                 }
                 $this->line($first_value - $second_value);
                 break;
             case '*':
                 if($second_value == null || !is_numeric($second_value)) {
-                    $this->error("This operation requires two values");
+                    $this->error("This operation requires two numerical values");
                     return;
                 }
                 $this->line($first_value * $second_value);
                 break;
             case '/':
                 if($second_value == null || !is_numeric($second_value)) {
-                    $this->error("This operation requires two values");
+                    $this->error("This operation requires two numerical values");
                     return;
                 }
 
